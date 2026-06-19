@@ -7,6 +7,136 @@
 
 
   var mq = window.matchMedia("(max-width: 768px)");
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function BackgroundParticleEffect(container, videoSrc, options) {
+    this.container = container;
+    this.videoSrc = videoSrc;
+    this.options = options || {};
+    this.observeTarget = this.options.observeTarget || container;
+    this.hideAfter = typeof this.options.hideAfter === "number" ? this.options.hideAfter : 200;
+    this.video = null;
+    this.observer = null;
+    this.isActive = false;
+    this.handleScroll = this.updateScrollState.bind(this);
+    this.init();
+  }
+
+  BackgroundParticleEffect.prototype.init = function () {
+    if (!this.container || !this.videoSrc) return;
+
+    var item = document.createElement("div");
+    item.className = "bg-video-item";
+
+    var video = document.createElement("video");
+    video.className = "jgs-recruit-top__fv-bg-video-media";
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = "metadata";
+    video.defaultPlaybackRate = 0.8;
+    video.playbackRate = 0.8;
+    video.setAttribute("muted", "");
+    video.setAttribute("loop", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("preload", "metadata");
+
+    if (!this.options.disabled) {
+      video.autoplay = true;
+      video.setAttribute("autoplay", "");
+    }
+
+    video.src = this.videoSrc;
+
+    item.appendChild(video);
+    this.container.appendChild(item);
+    this.video = video;
+
+    var markLoaded = function () {
+      this.container.classList.add("is-loaded");
+    }.bind(this);
+
+    if (video.readyState >= 1) {
+      markLoaded();
+    } else {
+      video.addEventListener("loadedmetadata", markLoaded, { once: true });
+    }
+
+    if (this.options.disabled) {
+      this.pause();
+      return;
+    }
+
+    window.addEventListener("scroll", this.handleScroll, { passive: true });
+    this.observe();
+    this.updateScrollState();
+  };
+
+  BackgroundParticleEffect.prototype.observe = function () {
+    if (!("IntersectionObserver" in window)) {
+      this.activate();
+      return;
+    }
+
+    this.observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            this.activate();
+          } else {
+            this.deactivate();
+          }
+        }, this);
+      }.bind(this),
+      {
+        root: null,
+        threshold: 0.01,
+      }
+    );
+
+    this.observer.observe(this.observeTarget);
+  };
+
+  BackgroundParticleEffect.prototype.activate = function () {
+    if (!this.video) return;
+    this.isActive = true;
+    this.container.classList.add("is-active");
+    this.updateScrollState();
+  };
+
+  BackgroundParticleEffect.prototype.play = function () {
+    if (!this.video) return;
+    this.video.defaultPlaybackRate = 0.8;
+    this.video.playbackRate = 0.8;
+
+    var playPromise = this.video.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(function () {});
+    }
+  };
+
+  BackgroundParticleEffect.prototype.deactivate = function () {
+    this.isActive = false;
+    this.container.classList.remove("is-active");
+    this.pause();
+  };
+
+  BackgroundParticleEffect.prototype.updateScrollState = function () {
+    var shouldHide = window.scrollY > this.hideAfter;
+    this.container.classList.toggle("is-scroll-hidden", shouldHide);
+
+    if (!this.isActive || shouldHide) {
+      this.pause();
+      return;
+    }
+
+    this.play();
+  };
+
+  BackgroundParticleEffect.prototype.pause = function () {
+    if (!this.video) return;
+    this.video.pause();
+  };
 
   function initCarousel(carousel, listSelector, cardSelector) {
 
@@ -89,6 +219,14 @@
   );
 
   var fv = page.querySelector(".jgs-recruit-top__fv");
+  var bgVideo = page.querySelector(".jgs-recruit-top__fv-bg-video");
+  var bgVideoEffect = bgVideo
+    ? new BackgroundParticleEffect(bgVideo, "../assets/video/recruit-mv-sparkle.mp4", {
+        disabled: prefersReducedMotion,
+        observeTarget: fv || bgVideo,
+        hideAfter: 200,
+      })
+    : null;
   var scrollTargets = [];
 
   var about = page.querySelector(".jgs-recruit-top__section--about");
@@ -168,11 +306,10 @@
     if (jobItems.length) scrollTargets.push(recruitJobs);
   }
 
-  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
   if (!fv && !scrollTargets.length) return;
 
   if (prefersReducedMotion) {
+    if (bgVideoEffect) bgVideoEffect.pause();
     if (fv) fv.classList.add("is-inview");
     scrollTargets.forEach(function (target) {
       target.classList.add("is-inview");
