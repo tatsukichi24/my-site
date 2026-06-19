@@ -1,0 +1,657 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ジュエリー | 取扱商品</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500;600;700&family=Zen+Old+Mincho:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/foundation/variables.css" />
+    <link rel="stylesheet" href="../assets/css/foundation/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout/header.css" />
+    <link rel="stylesheet" href="../assets/css/layout/footer.css" />
+    <link rel="stylesheet" href="../assets/css/pages/products.css" />
+    <link rel="stylesheet" href="../assets/css/pages/top.css" />
+  </head>
+  <body>
+    <header class="jgs-header">
+      <div class="jgs-header__inner">
+        <a class="jgs-header__logo" href="../index.html">
+          <img src="../assets/svg/logo.svg" width="231" height="88" decoding="async" alt="ジュエルグランスエムネ" />
+        </a>
+        <button
+          type="button"
+          class="jgs-header__menu-btn"
+          aria-expanded="false"
+          aria-controls="jgs-header-nav"
+          aria-label="メニューを開く"
+        >
+          <span class="jgs-header__menu-icon" aria-hidden="true"></span>
+        </button>
+        <nav id="jgs-header-nav" class="jgs-header__nav" aria-label="主要ナビゲーション">
+          <ul class="jgs-header__list">
+            <li class="jgs-header__item"><a class="jgs-header__link" href="../index.html">トップ</a></li>
+            <li class="jgs-header__item jgs-header__item--has-products"><span class="jgs-header__link" tabindex="0">取扱商品</span><div class="jgs-header__products-mega" role="region" aria-label="取扱商品">
+              <div class="jgs-header__products-mega-inner">
+                <aside class="jgs-header__products-mega-label" aria-hidden="true">
+                  <span class="jgs-header__products-mega-label-en">PRODUCTS</span>
+                  <span class="jgs-header__products-mega-label-jp">取扱商品</span>
+                </aside>
+                <div class="jgs-header__products-mega-grid">
+              <a class="jgs-header__recruit-mega-card" href="../products/jewelry.html">
+                <span class="jgs-header__recruit-mega-card-title">ジュエリー</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/gnav_jewelry.webp" width="100" height="100" alt="ジュエリー">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../products/watch.html">
+                <span class="jgs-header__recruit-mega-card-title">時計</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/gnav_watch.webp" width="100" height="100" alt="時計">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../products/bag.html">
+                <span class="jgs-header__recruit-mega-card-title">バッグ</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/gnav_bag.webp" width="100" height="100" alt="バッグ">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../products/accessory.html">
+                <span class="jgs-header__recruit-mega-card-title">アクセサリー</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/gnav_accessory.webp" width="100" height="100" alt="アクセサリー">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../products/misc.html">
+                <span class="jgs-header__recruit-mega-card-title">雑貨/その他</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/gnav_other.webp" width="100" height="100" alt="雑貨/その他">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+                </div>
+              </div>
+            </div></li>
+            <li class="jgs-header__item jgs-header__item--has-services"><span class="jgs-header__link" tabindex="0">サービス内容</span><div class="jgs-header__services-mega" role="region" aria-label="サービス内容">
+              <div class="jgs-header__services-mega-inner">
+                <aside class="jgs-header__services-mega-label" aria-hidden="true">
+                  <span class="jgs-header__services-mega-label-en">SERVICE</span>
+                  <span class="jgs-header__services-mega-label-jp">サービス内容</span>
+                </aside>
+                <div class="jgs-header__services-mega-grid">
+              <a class="jgs-header__recruit-mega-card" href="../services/sales/index.html">
+                <span class="jgs-header__recruit-mega-card-title">ジュエリー販売</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/gnav_sales.webp" width="100" height="100" alt="ジュエリー販売">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../services/repair/index.html">
+                <span class="jgs-header__recruit-mega-card-title">ジュエリー修理</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/gnav_repair.webp" width="100" height="100" alt="ジュエリー修理">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../services/reform/index.html">
+                <span class="jgs-header__recruit-mega-card-title">ジュエリーリフォーム</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/gnav_reform.webp" width="100" height="100" alt="ジュエリーリフォーム">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../services/buyback/index.html">
+                <span class="jgs-header__recruit-mega-card-title">買取</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/gnav_buyback.webp" width="100" height="100" alt="買取">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../services/watch-repair/index.html">
+                <span class="jgs-header__recruit-mega-card-title">時計修理</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/gnav_watch-repair.webp" width="100" height="100" alt="時計修理">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+                </div>
+              </div>
+            </div></li>
+            <li class="jgs-header__item"><a class="jgs-header__link" href="../shop-list/index.html">店舗紹介</a></li>
+            <li class="jgs-header__item"><a class="jgs-header__link" href="../news/index.html">お知らせ</a></li>
+            <li class="jgs-header__item"><a class="jgs-header__link" href="../company/index.html">会社情報</a></li>
+          </ul>
+        </nav>
+        <div class="jgs-header__recruit-wrap">
+
+        <a class="jgs-header__recruit" href="../recruit/index.html">
+
+          <picture>
+            <source media="(max-width: 1024px)" srcset="../assets/svg/sp_recruit_btn.svg" />
+            <img
+              class="jgs-header__recruit-img"
+              src="../assets/svg/recruit_btn.svg"
+              width="190"
+              height="190"
+              decoding="async"
+              alt="採用情報"
+            />
+          </picture>
+
+        </a>
+
+                <div class="jgs-header__recruit-mega" role="region" aria-label="採用情報">
+          <div class="jgs-header__recruit-mega-inner">
+            <aside class="jgs-header__recruit-mega-label" aria-hidden="true">
+              <span class="jgs-header__recruit-mega-label-en">RECRUIT</span>
+              <span class="jgs-header__recruit-mega-label-jp">採用情報</span>
+            </aside>
+            <div class="jgs-header__recruit-mega-grid">
+              <a class="jgs-header__recruit-mega-card" href="../recruit/index.html">
+                <span class="jgs-header__recruit-mega-card-title">採用トップ</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/recruit-top_card.webp" width="100" height="100" alt="採用トップ">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../recruit/childcare/index.html">
+                <span class="jgs-header__recruit-mega-card-title">子育て両立応援支援</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/recruit-childcare_card.webp" width="100" height="100" alt="子育て両立応援支援">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../recruit/recruitment/index.html">
+                <span class="jgs-header__recruit-mega-card-title">採用情報</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/recruit-info_card.webp" width="100" height="100" alt="採用情報">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../recruit/part-time/index.html">
+                <span class="jgs-header__recruit-mega-card-title">募集要項<br>アルバイト</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/recruit-part-time_card.webp" width="100" height="100" alt="募集要項アルバイト">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="jgs-header__recruit-mega-card" href="../recruit/full-time/index.html">
+                <span class="jgs-header__recruit-mega-card-title">募集要項<br>正社員</span>
+                <div class="jgs-header__recruit-mega-card-stack" aria-hidden="true">
+                  <div class="jgs-header__recruit-mega-card-stack-mid">
+                    <div class="jgs-header__recruit-mega-card-stack-top">
+                      <div class="jgs-header__recruit-mega-card-visual">
+                        <img src="../assets/image/recruit-full-time_card.webp" width="100" height="100" alt="募集要項正社員">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="jgs-products-page">
+      <section class="jgs-products-hero" aria-labelledby="products-hero-title">
+        <div class="jgs-products-hero__inner">
+          <h1 id="products-hero-title" class="jgs-products-hero__title"><span>取扱商品</span><br />ジュエリー</h1>
+        </div>
+      </section>
+
+      <section class="jgs-products-section" aria-labelledby="jgs-k10-heading">
+        <div class="jgs-products-section__inner">
+          <div class="jgs-products-k10-head">
+            <div class="jgs-products-k10-head__rule" aria-hidden="true"></div>
+            <h2 id="jgs-k10-heading" class="jgs-products-section__title">
+              <span class="jgs-products-section__title-en">Necklace</span>
+              <span>K10 ジュエリー</span>
+            </h2>
+          </div>
+
+          <div class="jgs-products-k10-layout">
+            <article class="jgs-products-k10-split" aria-label="K10 ジュエリー 商品イメージ">
+              <div class="jgs-products-k10-split__main">
+                <img src="../assets/image/jewelry_necklace_02.png" width="518" height="497" alt="パライバトルマリン 6本爪ネックレス メイン" />
+                <p class="jgs-products-k10-split__caption">
+                  アレキサンドライト ストレートリング レディース K10 10金<br />セール価格¥69,800(税込)
+                </p>
+              </div>
+              <div class="jgs-products-k10-split__side">
+                <div class="jgs-products-k10-split__side-item">
+                  <img src="../assets/image/jewelry_necklace_01.png" width="241" height="241" alt="パライバトルマリン ネックレス寄りイメージ" />
+                  <p class="jgs-products-k10-split__caption">
+                    パライバトルマリン 6本爪ネックレス レディース K10 10金<br />セール価格￥37,800
+                  </p>
+                </div>
+                <div class="jgs-products-k10-split__side-item">
+                  <img src="../assets/image/jewelry_necklace_03.png" width="241" height="241" alt="パライバトルマリン ネックレス着用イメージ" />
+                  <p class="jgs-products-k10-split__caption">
+                    ロードライトガーネット 4本爪ぶら下がりピアス レディース K10 10金<br />セール価格¥21,800
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="jgs-products-section jgs-products-section--brand" aria-labelledby="jgs-k18-heading">
+        <div class="jgs-products-section__inner">
+          <div class="jgs-products-brand-head">
+            <div class="jgs-products-brand-head__text">
+              <p class="jgs-products-brand-head__en">Ring</p>
+              <h2 id="jgs-k18-heading" class="jgs-products-brand-head__title">K18・Pt ブランドジュエリー</h2>
+            </div>
+            <div class="jgs-products-brand-head__rule" aria-hidden="true"></div>
+          </div>
+
+          <div class="jgs-products-brand-grid">
+            <div class="jgs-products-brand-grid__cell jgs-products-brand-grid__cell--copy">
+              <div class="jgs-products-brand-logo" lang="en">
+                <img src="../assets/image/dicalleido_logo.png" width="64" height="64" alt="Dicalleido" />
+              </div>
+              <p class="jgs-products-brand-grid__copy">
+                厳選されたダイヤモンドやカラーストーン、上質なプラチナ・ゴールドのみを使用し、熟練の職人が細部まで丁寧に仕立てるハイエンドジュエリーブランド。華美に頼らず、秘かに品格を放つデザインが身に着ける人の魅力を引き立てます。流行に左右されないタイムレスな美しさで、人生の節目や特別な瞬間を彩ります。
+              </p>
+            </div>
+            <figure class="jgs-products-brand-grid__figure">
+              <img src="../assets/image/jewelry_ring_02.png" width="600" height="400" alt="ブランドジュエリー コレクションイメージ1" />
+            </figure>
+            <figure class="jgs-products-brand-grid__figure">
+              <img src="../assets/image/jewelry_ring_01.png" width="672" height="410" alt="ブランドジュエリー コレクションイメージ2" />
+            </figure>
+            <figure class="jgs-products-brand-grid__figure">
+              <img src="../assets/image/jewelry_ring_03.png" width="518" height="554" alt="ブランドジュエリー コレクションイメージ3" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="jgs-products-section" aria-labelledby="jgs-designer-heading">
+        <div class="jgs-products-section__inner">
+          <div class="jgs-products-k10-head">
+            <div class="jgs-products-k10-head__rule" aria-hidden="true"></div>
+            <h2 id="jgs-k10-heading" class="jgs-products-section__title">
+              <span class="jgs-products-section__title-en">Earrings</span>
+              <span>デザイナーラグジュアリージュエリー</span>
+            </h2>
+          </div>
+          <div class="jgs-products-designer-layout">
+            <figure class="jgs-products-designer-layout__left">
+              <img src="../assets/image/jewelry_earrings_01.png" width="542" height="298" alt="デザイナーラグジュアリージュエリー 左イメージ" />
+            </figure>
+            <div class="jgs-products-designer-layout__right">
+              <p class="jgs-products-designer-layout__text">
+                国内外のデザイナーによるラグジュアリージュエリーを幅広く取り揃えております。世界各地から選りすぐりの希少石を用いた感性と技術が融合したコレクション。量産では出せない、洗練された存在感が魅力です。クラシックからモダンまで。人と同じでは満足できない大人のためのセレクト。“身につける芸術”をぜひ店頭でご覧ください。
+              </p>
+              <figure class="jgs-products-designer-layout__figure">
+                <img src="../assets/image/jewelry_earrings_02.png" width="632" height="357" alt="デザイナーラグジュアリージュエリー 右イメージ" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="jgs-products-category" aria-labelledby="jgs-products-category-heading">
+        <div class="jgs-products-category__inner">
+          <p class="jgs-products-category__label-en">Category</p>
+          <h2 id="jgs-products-category-heading" class="jgs-products-category__title">カテゴリ</h2>
+          <ul class="jgs-products-category__grid">
+            <li>
+              <a class="jgs-products-category-card" href="./bag.html">
+                <div class="jgs-products-category-card__stack">
+                  <div class="jgs-products-category-card__stack-mid">
+                    <div class="jgs-products-category-card__stack-top">
+                      <div class="jgs-products-category-card__media">
+                        <img
+                          class="jgs-products-category-card__img"
+                          src="../assets/image/products_bag.png"
+                          width="320"
+                          height="184"
+                          alt="バッグ"
+                          decoding="async"
+                        />
+                        <div class="jgs-products-category-card__foot">
+                          <span class="jgs-products-category-card__name">バッグ</span>
+                          <span class="jgs-products-category-card__more"
+                            >詳しく見る<span class="jgs-products-category-card__arrow" aria-hidden="true">→</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="jgs-products-category-card" href="./watch.html">
+                <div class="jgs-products-category-card__stack">
+                  <div class="jgs-products-category-card__stack-mid">
+                    <div class="jgs-products-category-card__stack-top">
+                      <div class="jgs-products-category-card__media">
+                        <img
+                          class="jgs-products-category-card__img"
+                          src="../assets/image/products_watch.png"
+                          width="320"
+                          height="184"
+                          alt="時計"
+                          decoding="async"
+                        />
+                        <div class="jgs-products-category-card__foot">
+                          <span class="jgs-products-category-card__name">時計</span>
+                          <span class="jgs-products-category-card__more"
+                            >詳しく見る<span class="jgs-products-category-card__arrow" aria-hidden="true">→</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="jgs-products-category-card" href="./misc.html">
+                <div class="jgs-products-category-card__stack">
+                  <div class="jgs-products-category-card__stack-mid">
+                    <div class="jgs-products-category-card__stack-top">
+                      <div class="jgs-products-category-card__media">
+                        <img
+                          class="jgs-products-category-card__img"
+                          src="../assets/image/products_other.png"
+                          width="320"
+                          height="184"
+                          alt="雑貨その他"
+                          decoding="async"
+                        />
+                        <div class="jgs-products-category-card__foot">
+                          <span class="jgs-products-category-card__name">雑貨その他</span>
+                          <span class="jgs-products-category-card__more"
+                            >詳しく見る<span class="jgs-products-category-card__arrow" aria-hidden="true">→</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="jgs-products-category-card" href="./accessory.html">
+                <div class="jgs-products-category-card__stack">
+                  <div class="jgs-products-category-card__stack-mid">
+                    <div class="jgs-products-category-card__stack-top">
+                      <div class="jgs-products-category-card__media">
+                        <img
+                          class="jgs-products-category-card__img"
+                          src="../assets/image/products_accessory.png"
+                          width="320"
+                          height="184"
+                          alt="アクセサリー"
+                          decoding="async"
+                        />
+                        <div class="jgs-products-category-card__foot">
+                          <span class="jgs-products-category-card__name">アクセサリー</span>
+                          <span class="jgs-products-category-card__more"
+                            >詳しく見る<span class="jgs-products-category-card__arrow" aria-hidden="true">→</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="jgs-top-contact-cta" aria-label="お問い合わせへのリンク">
+        <div class="jgs-top-contact-cta__inner">
+          <a class="jgs-top-contact-cta__link" href="../contact/index.html#jgs-contact-form" aria-label="お問い合わせへ">
+            <img class="jgs-top-contact-cta__btn-img" src="../assets/image/contact_btn.png" width="533" height="131" alt="" decoding="async" aria-hidden="true" />
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="jgs-footer">
+      <div class="jgs-footer__main">
+        <div class="jgs-footer__inner">
+          <div class="jgs-footer__brand">
+            <a class="jgs-footer__logo-link" href="../index.html">
+              <img
+                src="../assets/svg/logo.svg"
+                width="231"
+                height="88"
+                decoding="async"
+                alt="ジュエルグランスエムネ"
+              />
+            </a>
+            <div class="jgs-footer__company">
+              <p class="jgs-footer__company-name">株式会社ジュエルグランスエムネ</p>
+              <address class="jgs-footer__address">
+                〒729-6205<br />
+                広島県三次市塩町2123-5
+              </address>
+              <p class="jgs-footer__tel-fax">
+                <span><a href="tel:0824661035">ＴＥＬ 0824-66-1035</a></span>
+                <span>ＦＡＸ 0824-66-1031</span>
+              </p>
+            </div>
+          </div>
+
+                    <nav class="jgs-footer__nav-col jgs-footer__nav-primary" aria-label="サイトマップ（主要）">
+            <div class="jgs-footer__block">
+              <a href="../index.html">トップページ</a>
+            </div>
+            <hr class="jgs-footer__rule" />
+            <div class="jgs-footer__block">
+              <a href="../company/index.html">会社概要</a>
+            </div>
+            <hr class="jgs-footer__rule" />
+            <div class="jgs-footer__block">
+              <h2 class="jgs-footer__heading">取扱商品</h2>
+              <ul class="jgs-footer__sub">
+                <li><a href="jewelry.html">ジュエリー</a></li>
+                <li><a href="bag.html">バッグ</a></li>
+                <li><a href="watch.html">時計</a></li>
+                <li><a href="misc.html">雑貨/その他</a></li>
+                <li><a href="accessory.html">アクセサリー</a></li>
+              </ul>
+            </div>
+            <hr class="jgs-footer__rule" />
+            <div class="jgs-footer__block">
+              <h2 class="jgs-footer__heading">サービス内容</h2>
+              <ul class="jgs-footer__sub">
+                <li><a href="../services/sales/index.html">ジュエリー販売</a></li>
+                <li><a href="../services/repair/index.html">ジュエリー修理</a></li>
+                <li><a href="../services/buyback/index.html">買取</a></li>
+                <li><a href="../services/watch-repair/index.html">時計修理</a></li>
+                <li><a href="../services/reform/index.html">ジュエリーリフォーム</a></li>
+              </ul>
+            </div>
+            <hr class="jgs-footer__rule jgs-footer__utility jgs-footer__utility--sp" />
+            <div class="jgs-footer__block jgs-footer__utility jgs-footer__utility--sp">
+              <a href="../news/index.html">お知らせ</a>
+            </div>
+            <hr class="jgs-footer__rule jgs-footer__utility jgs-footer__utility--sp" />
+            <div class="jgs-footer__block jgs-footer__utility jgs-footer__utility--sp">
+              <a href="../privacy/index.html">プライバシーポリシー</a>
+            </div>
+          </nav>
+
+          <nav class="jgs-footer__nav-col jgs-footer__nav-stores" aria-label="店舗・お知らせ">
+            <div class="jgs-footer__block">
+              <h2 class="jgs-footer__heading">店舗</h2>
+              <ul class="jgs-footer__sub">
+                <li><a href="../shop-list/index.html">ジュエルグランスエムネ本店</a></li>
+                <li><a href="../shop-list/index.html">フレスポ三次プラザ店</a></li>
+                <li><a href="../shop-list/index.html">ゆめタウン吉田店</a></li>
+                <li><a href="../shop-list/index.html">ザ・ビッグ庄原店</a></li>
+                <li><a href="../shop-list/index.html">ゆめタウン黒瀬店</a></li>
+                <li><a href="../shop-list/index.html">イオン三原店</a></li>
+                <li><a href="../shop-list/index.html">アクト神辺店</a></li>
+              </ul>
+            </div>
+            <hr class="jgs-footer__rule jgs-footer__utility jgs-footer__utility--pc" />
+            <div class="jgs-footer__block jgs-footer__utility jgs-footer__utility--pc">
+              <a href="../news/index.html">お知らせ</a>
+            </div>
+            <hr class="jgs-footer__rule jgs-footer__utility jgs-footer__utility--pc" />
+            <div class="jgs-footer__block jgs-footer__utility jgs-footer__utility--pc">
+              <a href="../privacy/index.html">プライバシーポリシー</a>
+            </div>
+</nav>
+
+                    <nav class="jgs-footer__nav-col jgs-footer__nav-recruit" aria-label="採用情報">
+            <div class="jgs-footer__block">
+              <a href="../recruit/index.html">採用トップ</a>
+            </div>
+            <hr class="jgs-footer__rule" />
+            <div class="jgs-footer__block">
+              <a href="../recruit/recruitment/index.html">採用情報</a>
+            </div>
+            <hr class="jgs-footer__rule" />
+            <div class="jgs-footer__block">
+              <h2 class="jgs-footer__heading">募集要項</h2>
+              <ul class="jgs-footer__sub">
+                <li><a href="../recruit/part-time/index.html">アルバイト</a></li>
+                <li><a href="../recruit/full-time/index.html">正社員</a></li>
+              </ul>
+            </div>
+            <hr class="jgs-footer__rule" />
+            <div class="jgs-footer__block">
+              <h2 class="jgs-footer__heading"><a href="../recruit/childcare/index.html">子育て両立応援支援</a></h2>
+              <ul class="jgs-footer__sub">
+                <li><a href="../recruit/index.html#worker-support">子育てワーカー応援できる理由</a></li>
+                <li><a href="../recruit/index.html#appeal">グランスエムネの魅力</a></li>
+                <li><a href="../recruit/index.html#flow">お仕事の流れ</a></li>
+                <li><a href="../recruit/index.html#interview">従業員インタビュー</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="jgs-footer__actions">
+            <a class="jgs-footer__cta jgs-footer__cta--light" href="#">
+              <img
+                class="jgs-footer__cta-img"
+                src="../assets/svg/footer-ec_btn.svg"
+                width="349"
+                height="105"
+                alt=""
+                decoding="async"
+                aria-hidden="true"
+              />
+            </a>
+            <a class="jgs-footer__cta jgs-footer__cta--light" href="../contact/index.html#jgs-contact-form">
+              <img
+                class="jgs-footer__cta-img"
+                src="../assets/svg/footer-contact_btn.svg"
+                width="349"
+                height="105"
+                alt=""
+                decoding="async"
+                aria-hidden="true"
+              />
+            </a>
+            <a class="jgs-footer__cta jgs-footer__cta--dark" href="../recruit/entry/index.html">
+              <img
+                class="jgs-footer__cta-img"
+                src="../assets/svg/footer_entry_btn.svg"
+                width="220"
+                height="86"
+                alt=""
+                decoding="async"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="jgs-footer__bottom">
+        <p class="jgs-footer__copyright">&copy;2022 Jewel Gran Suemune.</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/common.js" defer></script>
+    <script src="../assets/js/pages/products.js" defer></script>
+  </body>
+</html>

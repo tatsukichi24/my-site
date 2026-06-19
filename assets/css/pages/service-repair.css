@@ -1,0 +1,1020 @@
+/* サービス内容：ジュエリー修理（services/repair） */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.jgs-service-repair {
+  background: #fff;
+  color: #040000;
+}
+
+#main.jgs-service-repair {
+  overflow: hidden;
+}
+
+.jgs-service-repair-hero {
+  overflow: hidden;
+}
+
+.jgs-service-repair-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.4fr) minmax(0, 2.6fr);
+  grid-template-rows: auto auto;
+  align-items: start;
+  column-gap: clamp(20px, 3.5vw, 56px);
+  padding-left: calc(var(--jgs-side-padding-vw) + clamp(12px, 1.25vw, 24px));
+  padding-right: 0;
+}
+
+.jgs-service-repair-hero__copy-head {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: clamp(56px, 5vw, 80px);
+  padding-right: clamp(8px, 2vw, 20px);
+  align-self: start;
+}
+
+.jgs-service-repair-hero__copy-rest {
+  grid-column: 1;
+  grid-row: 2;
+  padding-right: clamp(8px, 2vw, 20px);
+  align-self: start;
+}
+
+.jgs-service-repair-hero__label {
+  margin: 0;
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-body-sub);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: rgb(35 24 21 / 0.52);
+}
+
+.jgs-service-repair-hero__page-title {
+  margin: 0;
+  font-family: "Zen Antique", var(--jgs-font-noto-serif);
+  font-size: var(--jgs-font-size-catch);
+  font-weight: 300;
+  line-height: 1.2;
+  color: #103455;
+}
+
+.jgs-service-repair-hero__tagline {
+  margin: 0;
+  font-family: var(--jgs-font-noto-serif);
+  font-size: clamp(28px, 2.5vw, 48px);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: #103455;
+}
+
+.jgs-service-repair-hero__text {
+  margin-top: 40px;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-body);
+  line-height: 1.85;
+  color: #040000;
+}
+
+.jgs-service-repair-hero__visual {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  min-width: 0;
+  align-self: center;
+}
+
+.jgs-service-repair-hero__media {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 968 / 581;
+}
+
+.jgs-service-repair-hero__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.jgs-service-repair-hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: clamp(14px, 4vw, 32px);
+  padding-bottom: clamp(12%, 18vw, 26%);
+  gap: 0.35em;
+  pointer-events: none;
+}
+
+.jgs-service-repair-hero__overlay-line {
+  font-family: var(--jgs-font-inter);
+  font-size: clamp(0.62rem, 2.5vw, 0.85rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.96);
+}
+
+.jgs-service-repair-hero__overlay-line:last-child {
+  margin-left: clamp(1.25rem, 7vw, 2.75rem);
+}
+
+@media (max-width: 900px) {
+  .jgs-service-repair-hero__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    width: 100%;
+    padding-inline: var(--jgs-gutter);
+  }
+
+  .jgs-service-repair-hero__copy-head,
+  .jgs-service-repair-hero__visual,
+  .jgs-service-repair-hero__copy-rest {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .jgs-service-repair-hero__copy-head,
+  .jgs-service-repair-hero__copy-rest {
+    padding-right: 0;
+  }
+
+  .jgs-service-repair-hero__visual {
+    width: calc(100% + var(--jgs-gutter));
+    max-width: none;
+    margin-top: clamp(16px, 4vw, 28px);
+    margin-right: calc(-1 * var(--jgs-gutter));
+    margin-left: 0;
+    align-self: stretch;
+  }
+
+  .jgs-service-repair-hero__media {
+    max-width: none;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 0 0 0 clamp(14px, 3.5vw, 22px);
+  }
+}
+
+/* ----- 修理可能なもの ----- */
+
+.jgs-service-repair-items {
+  padding: clamp(40px, 6vw, 88px) 0 clamp(48px, 7vw, 100px);
+  background: #fff;
+}
+
+.jgs-service-repair-items__inner {
+  width: var(--jgs-layout-1600);
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: var(--jgs-gutter);
+}
+
+.jgs-service-repair-items__head {
+  margin: 0 0 clamp(28px, 4vw, 48px);
+}
+
+.jgs-service-repair-items__eyebrow {
+  margin: 0;
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-small);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(35 24 21 / 0.45);
+}
+
+.jgs-service-repair-items__title {
+  margin: 0;
+  font-family: var(--jgs-font-noto-serif);
+  font-size: clamp(28px, 2.2vw, 42px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #103455;
+}
+
+.jgs-service-repair-items__rows {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.5vw, 28px);
+}
+
+.jgs-service-repair-items__row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(12px, 2vw, 24px);
+}
+
+.jgs-service-repair-items__row--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.jgs-service-repair-items__row--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 75%;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.jgs-service-repair-items__cell {
+  min-width: 0;
+  padding: 10px 10px 0 10px;
+  border: 1px solid #000;
+}
+
+.jgs-service-repair-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+}
+
+.jgs-service-repair-card__media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: rgb(35 24 21 / 0.06);
+}
+
+.jgs-service-repair-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.jgs-service-repair-card__body {
+  flex: 1 1 auto;
+  padding: clamp(14px, 2vw, 22px) 0;
+  text-align: center;
+}
+
+.jgs-service-repair-card__title {
+  margin: 0;
+  font-family: var(--jgs-font-noto-serif);
+  font-size: clamp(20px, 1.35vw, 28px);
+  font-weight: 600;
+  line-height: 1.55;
+  color: #231815;
+}
+
+.jgs-service-repair-card__note {
+  margin: 0;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-small);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .jgs-service-repair-items__row--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .jgs-service-repair-items__row--3 {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .jgs-service-repair-card__title {
+    font-size: var(--jgs-font-size-repaired-item-title-sp);
+  }
+}
+
+/* ----- 料金（価格表 SVG） ----- */
+
+.jgs-service-repair-price {
+  padding: clamp(40px, 6vw, 88px) 0 clamp(48px, 7vw, 100px);
+  background: #ede2d0;
+  border-radius: 200px 0 0 0;
+}
+
+.jgs-service-repair-price__inner {
+  width: var(--jgs-layout-1600);
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: var(--jgs-gutter);
+}
+
+.jgs-service-repair-price__head {
+  margin: 0 0 clamp(20px, 3vw, 32px);
+}
+
+.jgs-service-repair-price__eyebrow {
+  margin: 0;
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-small);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(35 24 21 / 0.45);
+}
+
+.jgs-service-repair-price__title {
+  margin: 0;
+  font-family: var(--jgs-font-noto-serif);
+  font-size: clamp(28px, 2.2vw, 42px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #103455;
+}
+
+.jgs-service-repair-price__banner {
+  position: relative;
+  margin: 0 0 clamp(12px, 2vw, 20px);
+  padding: 10px clamp(24px, 4vw, 56px) ;
+  background: #1a2d4e;
+  color: #fff;
+  text-align: center;
+}
+
+.jgs-service-repair-price__banner-title {
+  margin: 0;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-heading-title);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+}
+
+.jgs-service-repair-price__banner-lead {
+  margin: 0;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-small);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.jgs-service-repair-price__banner-tax {
+  position: absolute;
+  right: clamp(12px, 2vw, 28px);
+  bottom: clamp(10px, 1.6vw, 16px);
+  margin: 0;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-small);
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: rgb(255 255 255 / 0.92);
+}
+
+.jgs-service-repair-price__figure {
+  margin: 0;
+  line-height: 0;
+}
+
+.jgs-service-repair-price__figure--pc {
+  overflow: hidden;
+}
+
+.jgs-service-repair-price__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.jgs-service-repair-price__sp-panels {
+  display: none;
+}
+
+.jgs-service-repair-price__sp-panel {
+  margin: 0;
+  overflow: visible;
+  line-height: 0;
+}
+
+.jgs-service-repair-price__sp-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .jgs-service-repair-price {
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+    border-radius: 0 clamp(48px, 14vw, 88px) 0 0;
+    padding: clamp(28px, 7vw, 44px) 0 clamp(48px, 10vw, 72px);
+  }
+
+  .jgs-service-repair-price__inner {
+    overflow: visible;
+  }
+
+  .jgs-service-repair-price__head {
+    margin-bottom: clamp(16px, 4vw, 24px);
+  }
+
+  .jgs-service-repair-price__banner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: clamp(6px, 1.5vw, 10px);
+    margin-bottom: clamp(10px, 2.5vw, 14px);
+    padding: clamp(14px, 3.8vw, 18px) clamp(14px, 3.5vw, 18px);
+    text-align: left;
+    overflow: visible;
+  }
+
+  .jgs-service-repair-price__banner-title {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: left;
+    font-size: clamp(1rem, 4.1vw, 1.2rem);
+    line-height: 1.35;
+  }
+
+  .jgs-service-repair-price__banner-lead {
+    grid-column: 1;
+    grid-row: auto;
+    margin: 0;
+    min-width: 0;
+    font-size: clamp(0.6875rem, 2.9vw, 0.8125rem);
+    line-height: 1.45;
+  }
+
+  .jgs-service-repair-price__banner-tax {
+    position: static;
+    grid-column: 1;
+    grid-row: auto;
+    margin: 0;
+    justify-self: end;
+    font-size: clamp(0.625rem, 2.6vw, 0.75rem);
+    line-height: 1.45;
+    white-space: normal;
+  }
+
+  .jgs-service-repair-price__figure--pc {
+    display: none;
+  }
+
+  .jgs-service-repair-price__sp-panels {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 2.8vw, 14px);
+    overflow: visible;
+  }
+
+  .jgs-service-repair-price__sp-panel {
+    flex: 0 0 auto;
+  }
+}
+
+/* ----- FLOW 修理のステップ（時計修理 FLOW と同構造・同スタイル） ----- */
+
+.jgs-service-repair-flow {
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(-44px, -6.5vw, -24px);
+  padding: calc(clamp(40px, 6vw, 88px) + clamp(20px, 4vw, 40px)) 0 clamp(48px, 7vw, 100px);
+  background-color: #fff;
+  border-top-left-radius: clamp(56px, 10vw, 140px);
+}
+
+.jgs-service-repair-flow__inner {
+  width: var(--jgs-layout-1600);
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: var(--jgs-gutter);
+}
+
+.jgs-service-repair-flow__head {
+  margin: 0 0 clamp(28px, 4vw, 48px);
+}
+
+.jgs-service-repair-flow__eyebrow {
+  margin: 0;
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-small);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #103455;
+}
+
+.jgs-service-repair-flow__title {
+  margin: 0;
+  font-family: var(--jgs-font-noto-serif);
+  font-size: clamp(28px, 2.2vw, 42px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #103455;
+}
+
+.jgs-service-repair-flow__list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0 40px;
+  --jgs-flow-rail: 80px;
+}
+
+.jgs-service-repair-flow__list::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 50px;
+  bottom: 50px;
+  left: var(--jgs-flow-rail);
+  width: 1px;
+  background: #cfc3b0;
+}
+
+.jgs-service-repair-flow__item {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: var(--jgs-flow-rail) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  min-width: 0;
+}
+
+.jgs-service-repair-flow__item + .jgs-service-repair-flow__item {
+  margin-top: 100px;
+}
+
+.jgs-service-repair-flow__marker {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.jgs-service-repair-flow__step-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  min-height: 64px;
+  padding: 7px 5px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  background: #ede2d0;
+  color: #231815;
+}
+
+.jgs-service-repair-flow__step-label {
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-small);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.jgs-service-repair-flow__step-num {
+  margin-top: 3px;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-body);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.jgs-service-repair-flow__content {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  min-width: 0;
+}
+
+.jgs-service-repair-flow__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.jgs-service-repair-flow__icon {
+  display: block;
+  width: 100%;
+  max-width: 145px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.jgs-service-repair-flow__item-title {
+  margin: 0;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-heading-title);
+  font-weight: 500;
+  line-height: 1.45;
+  color: #231815;
+}
+
+.jgs-service-repair-flow__item-desc {
+  margin: clamp(8px, 1.2vw, 12px) 0 0;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-body);
+  line-height: 1.85;
+  color: rgb(35 24 21 / 0.88);
+}
+
+@media (max-width: 768px) {
+  .jgs-service-repair-flow {
+    margin-top: 0;
+    padding-top: clamp(36px, 8vw, 52px);
+  }
+
+  .jgs-service-repair-flow__list {
+    padding-inline: 0;
+    --jgs-flow-rail: 48px;
+  }
+
+  .jgs-service-repair-flow__list::before {
+    content: none;
+  }
+
+  .jgs-service-repair-flow__item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 28px;
+    left: calc(var(--jgs-flow-rail) * 0.5);
+    width: 1px;
+    height: calc(100% + clamp(40px, 9vw, 72px));
+    transform: translateX(-50%);
+    background: #cfc3b0;
+  }
+
+  .jgs-service-repair-flow__item {
+    grid-template-columns: var(--jgs-flow-rail) minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+  }
+
+  .jgs-service-repair-flow__item + .jgs-service-repair-flow__item {
+    margin-top: clamp(40px, 9vw, 72px);
+  }
+
+  .jgs-service-repair-flow__marker {
+    position: relative;
+    z-index: 1;
+    align-self: start;
+    padding-top: 2px;
+  }
+
+  .jgs-service-repair-flow__step-badge {
+    width: 52px;
+    min-height: 52px;
+    padding: 5px 3px;
+  }
+
+  .jgs-service-repair-flow__step-label {
+    font-size: clamp(8px, 2.1vw, 10px);
+    letter-spacing: 0.1em;
+  }
+
+  .jgs-service-repair-flow__step-num {
+    margin-top: 2px;
+    font-size: clamp(11px, 3vw, 13px);
+  }
+
+  .jgs-service-repair-flow__content {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    row-gap: 10px;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .jgs-service-repair-flow__text {
+    display: contents;
+  }
+
+  .jgs-service-repair-flow__icon-wrap {
+    grid-column: 1;
+    grid-row: 1;
+    width: 64px;
+    aspect-ratio: 1;
+    justify-content: flex-start;
+  }
+
+  .jgs-service-repair-flow__item-title {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    align-self: center;
+    font-size: clamp(14px, 3vw, 22px);
+    line-height: 1.35;
+  }
+
+  .jgs-service-repair-flow__item-desc {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
+    font-size: clamp(12px, 2.5vw, 20px);
+    line-height: 1.75;
+    text-align: left;
+  }
+}
+
+/* ----- VOICE お客様の声 ----- */
+
+.jgs-service-repair-voice {
+  padding: clamp(44px, 6.5vw, 92px) 0 clamp(56px, 8vw, 112px);
+  background: #ede2d0;
+}
+
+.jgs-service-repair-voice__inner {
+  width: var(--jgs-layout-1600);
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: var(--jgs-gutter);
+}
+
+.jgs-service-repair-voice__head {
+  margin: 0 0 clamp(24px, 3.5vw, 40px);
+}
+
+.jgs-service-repair-voice__eyebrow {
+  margin: 0;
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-small);
+  letter-spacing: 0.14em;
+  color: rgb(35 24 21 / 0.45);
+  text-transform: uppercase;
+}
+
+.jgs-service-repair-voice__title {
+  margin: 0;
+  font-family: var(--jgs-font-noto-serif);
+  font-size: clamp(28px, 2.2vw, 42px);
+  line-height: 1.35;
+  color: #103455;
+}
+
+.jgs-service-repair-voice__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(16px, 2.2vw, 24px);
+}
+
+@media (min-width: 769px) {
+  .jgs-service-repair-voice__list {
+    padding-inline: 50px;
+  }
+}
+
+.jgs-service-repair-voice-card {
+  display: grid;
+  grid-template-columns: clamp(140px, 17vw, 220px) minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+  align-items: center;
+  background: #fff;
+  padding: clamp(16px, 2.1vw, 28px) clamp(16px, 2.5vw, 40px);
+}
+
+.jgs-service-repair-voice-card__media {
+  margin: 0;
+  line-height: 0;
+}
+
+.jgs-service-repair-voice-card__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.jgs-service-repair-voice-card__body {
+  min-width: 0;
+}
+
+.jgs-service-repair-voice-card__badge {
+  display: inline-block;
+  margin: 0;
+  padding: 4px 20px;
+  border-radius: 999px;
+  background: #103455;
+  color: #fff;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-small);
+  line-height: 1.2;
+}
+
+.jgs-service-repair-voice-card__title {
+  margin: 10px 0 0;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-heading-title);
+  font-weight: 500;
+  line-height: 1.35;
+  color: #231815;
+}
+
+.jgs-service-repair-voice-card__desc {
+  margin: 10px 0 0;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-small);
+  line-height: 1.85;
+  color: rgb(35 24 21 / 0.9);
+}
+
+.jgs-service-repair-voice-card__meta {
+  margin: 14px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+  align-items: stretch;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.jgs-service-repair-voice-card__meta div {
+  display: grid;
+  grid-template-columns: auto auto;
+  border: 1px solid #b9c4d6;
+}
+
+.jgs-service-repair-voice-card__meta dt,
+.jgs-service-repair-voice-card__meta dd {
+  margin: 0;
+  padding: 8px 20px;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-button);
+  line-height: 1.3;
+}
+
+.jgs-service-repair-voice-card__meta dt {
+  background: #103455;
+  color: #fff;
+  font-weight: 500;
+}
+
+.jgs-service-repair-voice-card__meta dd {
+  background: #fff;
+  color: #231815;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.jgs-service-repair-voice-card--has-footnote {
+  position: relative;
+  padding-bottom: clamp(28px, 3.5vw, 40px);
+}
+
+.jgs-service-repair-voice-card__footnote {
+  position: absolute;
+  right: clamp(16px, 2.5vw, 40px);
+  bottom: clamp(12px, 1.6vw, 20px);
+  margin: 0;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-small);
+  line-height: 1.3;
+  color: rgb(35 24 21 / 0.85);
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .jgs-service-repair-voice-card {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .jgs-service-repair-voice-card__media {
+    width: min(240px, 55vw);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .jgs-service-repair-voice-card {
+    gap: clamp(14px, 3.5vw, 20px);
+    padding: 20px;
+    border: 1px solid rgb(16 52 85 / 0.2);
+  }
+
+  .jgs-service-repair-voice-card__media {
+    width: min(200px, 56vw);
+    max-width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .jgs-service-repair-voice-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .jgs-service-repair-voice-card__title {
+    font-size: var(--jgs-font-size-body);
+  }
+
+  .jgs-service-repair-voice-card__desc {
+    font-size: var(--jgs-font-size-body-sub);
+  }
+
+  .jgs-service-repair-voice-card__meta {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(6px, 1.6vw, 10px);
+  }
+
+  .jgs-service-repair-voice-card__meta div {
+    min-width: 0;
+    width: 100%;
+    grid-template-columns: minmax(3.5em, 36%) minmax(0, 1fr);
+  }
+
+  .jgs-service-repair-voice-card--has-footnote {
+    padding-bottom: 20px;
+  }
+
+  .jgs-service-repair-voice-card__footnote {
+    position: static;
+    margin: clamp(8px, 2vw, 12px) 0 0;
+    text-align: right;
+  }
+
+  .jgs-service-repair-voice-card__meta dt,
+  .jgs-service-repair-voice-card__meta dd {
+    padding: clamp(5px, 1.4vw, 7px) clamp(6px, 1.8vw, 10px);
+    font-size: clamp(12px, 3vw, 16px);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .jgs-service-repair-voice-card__meta dt {
+    flex-shrink: 0;
+  }
+
+  .jgs-service-repair-voice-card__meta dd {
+    border-left: 1px solid #b9c4d6;
+    min-width: 0;
+  }
+}
+
+@keyframes jgs-service-repair-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.jgs-service-repair-anim-ready .jgs-service-repair-anim-item {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.jgs-service-repair-anim-ready .jgs-service-repair-items.is-inview .jgs-service-repair-anim-item {
+  animation: jgs-service-repair-fade-up 1.1s cubic-bezier(0.22, 1, 0.36, 1) calc(0.18s + var(--jgs-service-repair-anim-index, 0) * 0.22s) forwards;
+}
+
+.jgs-service-repair-anim-ready .jgs-service-repair-price.is-inview .jgs-service-repair-price__figure--pc.jgs-service-repair-anim-item,
+.jgs-service-repair-anim-ready .jgs-service-repair-price.is-inview .jgs-service-repair-price__sp-panel.jgs-service-repair-anim-item {
+  animation: jgs-service-repair-fade-up 1.1s cubic-bezier(0.22, 1, 0.36, 1) calc(0.18s + var(--jgs-service-repair-anim-index, 0) * 0.22s) forwards;
+}
+
+.jgs-service-repair-anim-ready .jgs-service-repair-flow.is-inview .jgs-service-repair-flow__item.jgs-service-repair-anim-item {
+  animation: jgs-service-repair-fade-up 1.1s cubic-bezier(0.22, 1, 0.36, 1) calc(0.18s + var(--jgs-service-repair-anim-index, 0) * 0.22s) forwards;
+}
+
+.jgs-service-repair-anim-ready .jgs-service-repair-voice.is-inview .jgs-service-repair-voice__item.jgs-service-repair-anim-item {
+  animation: jgs-service-repair-fade-up 1.1s cubic-bezier(0.22, 1, 0.36, 1) calc(0.18s + var(--jgs-service-repair-anim-index, 0) * 0.22s) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jgs-service-repair-anim-item {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
