@@ -1,0 +1,69 @@
+/* 採用情報ページの背景画像を2枚重ねにする */
+
+.jgs-recruitment-page .jgs-recruitment-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.jgs-recruitment-page.jgs-company {
+  position: relative;
+  isolation: isolate;
+  background-image: none;
+}
+
+.jgs-recruitment-page.jgs-company::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-image: url("../../recruit-image/recruit-recruitment_pic-bg.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  z-index: 0;
+}
+
+.jgs-recruitment-page.jgs-company::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: -10px;
+  pointer-events: none;
+  background-image: url("../../recruit-image/recruit-recruitment_bg.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 110%;
+  z-index: 1;
+}
+
+.jgs-recruitment-page .jgs-company-intro,
+.jgs-recruitment-page .jgs-company-message {
+  position: relative;
+  z-index: 2;
+}
+
+.jgs-recruit-cta,
+.jgs-footer {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .jgs-recruitment-page.jgs-company {
+    background-image: none;
+  }
+
+  .jgs-recruitment-page.jgs-company::before {
+    background-image: url("../../recruit-image/recruit-recruitment_pic-bg.png");
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .jgs-recruitment-page.jgs-company::after {
+    background-image: url("../../recruit-image/sp-recruit-recruitment_bg.png");
+    background-position: center top;
+    background-size: 100% 100%;
+  }
+}

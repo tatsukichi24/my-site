@@ -1,0 +1,153 @@
+/* 採用エントリーフォーム — MV・見出しはお問い合わせページ（contact.css）と同系統 */
+
+.jgs-entry {
+  /* pages/ から見て image は ../../image/（../assets/ は css/assets/ になってしまう） */
+  background-color: #fafafa;
+  background-image: url("../../image/entry-form_bg.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  padding-bottom: 150px;
+}
+
+.jgs-entry__mv {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  background-color: var(--jgs-color-white);
+}
+
+.jgs-entry__mv-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(28vw, 240px);
+  object-fit: cover;
+  object-position: center;
+}
+
+.jgs-entry__wrap {
+  padding-inline: var(--jgs-gutter);
+  box-sizing: border-box;
+}
+
+.jgs-entry__hero {
+  padding: clamp(32px, 5vw, 48px) 0 clamp(24px, 4vw, 40px);
+  text-align: center;
+}
+
+.jgs-entry__label-en {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: var(--jgs-font-size-small);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--jgs-color-contact-label-en);
+  padding-top: 100px;
+}
+
+.jgs-entry__title {
+  margin: 0;
+  font-family: "Noto Serif JP", "Noto Sans JP", serif;
+  font-size: var(--jgs-font-size-heading-title);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--jgs-color-form-accent-navy);
+}
+
+.jgs-entry__lead {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  margin-bottom: clamp(28px, 4vw, 48px);
+  padding: 0;
+  font-family: var(--jgs-font-sans);
+  font-size: var(--jgs-font-size-body);
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: var(--jgs-color-text-document);
+}
+
+.jgs-entry__lead p {
+  margin: 0 0 0.5em;
+}
+
+.jgs-entry__lead p:last-child {
+  margin-bottom: 0;
+}
+
+.jgs-entry__shell {
+  width: min(100%, var(--jgs-layout-900));
+  max-width: 900px;
+  margin-inline: auto;
+  padding: clamp(32px, 3vw, 50px) var(--jgs-gutter) 0;
+  background-color: var(--jgs-color-white);
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.jgs-entry .jgs-form {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding: 0 0 clamp(48px, 8vw, 100px);
+}
+
+.jgs-entry .jgs-form__fields {
+  gap: clamp(24px, 3vw, 30px);
+}
+
+.jgs-entry .jgs-form__label-text {
+  font-size: var(--jgs-font-size-body);
+  font-weight: 500;
+}
+
+.jgs-entry .jgs-form__radio-label {
+  font-size: var(--jgs-font-size-body);
+}
+
+.jgs-entry .jgs-form__badge {
+  padding: 3px 10px;
+  font-size: var(--jgs-font-size-body);
+}
+
+.jgs-entry .jgs-form__badge--optional {
+  border-width: 1px;
+}
+
+.jgs-entry .jgs-form__footer {
+  width: 100%;
+  max-width: none;
+  margin-top: clamp(32px, 5vw, 48px);
+  padding-inline: 0;
+}
+
+.jgs-entry .jgs-form__consent-text {
+  white-space: normal;
+}
+
+.jgs-entry .jgs-form__field,
+.jgs-entry .jgs-form__radio-label {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .jgs-entry__mv-img {
+    max-height: 180px;
+  }
+
+  .jgs-entry__label-en {
+    padding-top: clamp(28px, 8vw, 56px);
+  }
+
+  .jgs-entry__shell {
+    padding-inline: clamp(16px, 4vw, 20px);
+  }
+
+  .jgs-entry__lead {
+    font-size: var(--jgs-font-size-body-sub);
+  }
+}

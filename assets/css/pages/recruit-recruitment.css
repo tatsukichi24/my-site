@@ -1,0 +1,791 @@
+/* 採用情報（募集要項）ページ — 会社概要ページのレイアウトを流用し背景のみ差し替え */
+
+.jgs-recruitment-page.jgs-company {
+  background-image: url("../../recruit-image/recruit-recruitment_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center var(--jgs-header-offset);
+  background-attachment: fixed;
+  background-color: #ebe6e8;
+}
+
+#main.jgs-recruitment-page.jgs-company {
+  background-color: #ebe6e8;
+  overflow-x: clip;
+}
+
+.jgs-recruitment-page .jgs-company-outline-card__row {
+  grid-template-columns: clamp(108px, 11vw, 160px) minmax(0, 1fr);
+  gap: clamp(14px, 2vw, 22px);
+}
+
+.jgs-recruitment-page .jgs-company-outline-card__list {
+  margin-top: clamp(18px, 2.5vw, 28px);
+}
+
+.jgs-recruitment-page .jgs-company-message-card__body-wrap .jgs-company-outline-card__list {
+  margin-top: clamp(12px, 2vw, 20px);
+}
+
+.jgs-recruitment-page .jgs-company-outline-card__row dd ul {
+  margin: 0.5em 0 0;
+  padding-left: 1.2em;
+}
+
+.jgs-recruitment-page .jgs-company-outline-card__row dd p {
+  margin: 0;
+}
+
+.jgs-recruitment-page .jgs-company-outline-card__row dd p + p {
+  margin-top: 0.35em;
+}
+
+/* 2枚目のカードは会社概要の「企業理念」ブロックと同様の角丸 */
+.jgs-recruitment-page__card--part {
+  border-radius: 84px 0 84px 0;
+}
+
+@media (max-width: 768px) {
+  .jgs-recruitment-page__card--part {
+    border-radius: 0 0 42px 0;
+  }
+}
+
+.jgs-recruitment-page .jgs-company-message__inner {
+  grid-template-columns: max-content minmax(0, 1fr);
+}
+
+.jgs-recruitment-page .jgs-company-side-nav__label {
+  white-space: nowrap;
+}
+
+.jgs-recruitment-page .jgs-company-message-card > .jgs-company-message-card__body {
+  margin-top: 24px;
+}
+
+.jgs-recruitment-jobs-panel {
+  background-color: rgb(255 255 255 / 0.86);
+  border: 1px solid rgb(16 52 85 / 0.45);
+  border-radius: 0 84px 0 84px;
+  padding: clamp(26px, 4vw, 60px) clamp(32px, 3.5vw, 56px) clamp(40px, 6vw, 100px) clamp(32px, 3.5vw, 56px);
+}
+
+.jgs-recruitment-jobs-panel__label-en {
+  margin: 0;
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-small);
+  letter-spacing: 0.2em;
+  color: rgb(16 52 85 / 0.65);
+}
+
+.jgs-recruitment-jobs-panel .jgs-top-recruit-jobs__heading {
+  margin-top: 3px;
+  justify-content: flex-start;
+  display: block;
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-heading-title);
+  letter-spacing: 0.08em;
+  color: #103455;
+}
+
+.jgs-recruitment-jobs-panel .jgs-top-recruit-jobs__heading::before,
+.jgs-recruitment-jobs-panel .jgs-top-recruit-jobs__heading::after {
+  display: none;
+}
+
+@media (min-width: 769px) and (max-width: 1040px) {
+  #main.jgs-recruitment-page .jgs-company-message__inner,
+  .jgs-recruitment-page .jgs-company-message__inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-inline: var(--jgs-gutter);
+  }
+
+  .jgs-recruitment-page .jgs-company-side-nav {
+    display: none;
+  }
+
+  .jgs-recruitment-page .jgs-company-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(28px, 4vw, 40px);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .jgs-recruitment-page .jgs-company-content > * {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .jgs-recruitment-page #recruitment-job-description.jgs-recruitment-jobs-panel {
+    padding: clamp(30px, 4.5vw, 44px) clamp(24px, 4vw, 40px) clamp(44px, 6vw, 64px);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(16px, 2.6vw, 24px);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__meta {
+    gap: clamp(8px, 1.4vw, 12px);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__en {
+    font-size: clamp(12px, 1.55vw, 15px);
+    letter-spacing: 0.12em;
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__name {
+    font-size: clamp(20px, 2.8vw, 28px);
+    line-height: 1.35;
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__more {
+    font-size: clamp(13px, 1.8vw, 17px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1400px) {
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__meta {
+    gap: clamp(6px, 1vw, 10px);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__en {
+    font-size: clamp(12px, 1vw, 14px);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__name {
+    font-size: clamp(17px, 1.45vw, 20px);
+    white-space: nowrap;
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__more {
+    font-size: clamp(13px, 1.25vw, 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .jgs-top-recruit-jobs.jgs-recruitment-jobs-panel {
+    padding-inline: 0;
+  }
+
+  #main.jgs-recruitment-page.jgs-company {
+    background-color: #ebe6e8;
+    background-image: url("../../recruit-image/sp-recruit-recruitment_bg.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    background-attachment: scroll;
+  }
+
+  .jgs-recruitment-page .jgs-company-intro {
+    padding: clamp(24px, 6.4vw, 36px) 0 clamp(18px, 4.8vw, 24px);
+  }
+
+  .jgs-recruitment-page .jgs-company-message {
+    padding-bottom: clamp(48px, 12.8vw, 64px);
+  }
+
+  .jgs-recruitment-page .jgs-company-message__inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .jgs-recruitment-page .jgs-company-content {
+    gap: clamp(20px, 5.33vw, 25px);
+  }
+
+  /* 募集要項（1セクション目）— パネル枠なし・2カラム（カード見た目は既存のまま） */
+  .jgs-recruitment-page #recruitment-job-description.jgs-recruitment-jobs-panel {
+    margin-top: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .jgs-recruitment-page .jgs-company-philosophy-card__title,
+  .jgs-recruitment-page .jgs-company-message-card__title,
+  .jgs-recruitment-page .jgs-recruitment-jobs-panel .jgs-top-recruit-jobs__heading {
+    font-size: clamp(20px, 5.33vw, 26px);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__heading {
+    margin-top: 4px;
+  }
+
+  .jgs-recruitment-page #recruitment-job-description.jgs-top-recruit-jobs {
+    margin-top: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(10px, 2.67vw, 14px);
+    margin-top: clamp(16px, 4.27vw, 20px);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__stack {
+    --jgs-prod-card-r: clamp(8px, 2.13vw, 10px);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__stack-top {
+    padding: clamp(5px, 1.33vw, 8px);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__media {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* カード内テキストのみSP向けにサイズ調整（フォント・太さはPCと同じ） */
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__en {
+    font-size: var(--jgs-font-size-small);
+    letter-spacing: 0.12em;
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__name {
+    font-size: var(--jgs-font-size-small);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__more {
+    font-size: var(--jgs-font-size-x-small);
+  }
+
+  /* 応募方法・選考フロー — パネル枠なし・縦タイムライン */
+  .jgs-recruitment-page #recruitment-application-flow.jgs-recruitment-jobs-panel {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-company-philosophy-card__title {
+    margin-top: 4px;
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-company-philosophy-card__body {
+    margin-top: clamp(20px, 5.33vw, 28px);
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__steps {
+    --jgs-recruitment-flow-marker: clamp(56px, 14.93vw, 68px);
+    --jgs-recruitment-flow-gap: clamp(24px, 6.4vw, 32px);
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__step:not(:last-child)::after {
+    display: block;
+    top: calc(var(--jgs-recruitment-flow-marker) / 2);
+    left: calc(var(--jgs-recruitment-flow-marker) / 2);
+    width: 1px;
+    height: calc(100% + var(--jgs-recruitment-flow-gap));
+    background-color: #fff;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__step {
+    grid-template-columns: var(--jgs-recruitment-flow-marker) minmax(0, 1fr);
+    gap: clamp(12px, 3.2vw, 16px);
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__step + .jgs-recruitment-flow__step {
+    margin-top: var(--jgs-recruitment-flow-gap);
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__marker {
+    position: relative;
+    z-index: 1;
+    width: var(--jgs-recruitment-flow-marker);
+    height: var(--jgs-recruitment-flow-marker);
+    background: #fff;
+    box-shadow: none;
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__step:not(:last-child) .jgs-recruitment-flow__marker::after {
+    display: none;
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__marker-label {
+    font-size: var(--jgs-font-size-x-small);
+    letter-spacing: 0.14em;
+    color: rgb(16 52 85 / 0.55);
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__marker-num {
+    font-size: clamp(20px, 5.33vw, 24px);
+    font-weight: 600;
+    color: #103455;
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__body {
+    padding-top: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__step-title {
+    font-size: var(--jgs-font-size-body);
+    font-weight: 600;
+    line-height: 1.5;
+    color: #103455;
+  }
+
+  .jgs-recruitment-page #recruitment-application-flow .jgs-recruitment-flow__text {
+    margin-top: clamp(8px, 2.13vw, 10px);
+    font-size: var(--jgs-font-size-small);
+    line-height: 1.9;
+    color: #2f3034;
+  }
+
+  /* 求める人物像 — パネル枠なし・2カラム円形グリッド */
+  .jgs-recruitment-page #recruitment-ideal.jgs-recruitment-jobs-panel {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-ideal .jgs-company-message-card__body {
+    margin-top: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-ideal .jgs-recruitment-ideal__lead {
+    margin-top: clamp(16px, 4.27vw, 22px);
+    text-align: center;
+  }
+
+  .jgs-recruitment-page #recruitment-ideal .jgs-recruitment-ideal__subtitle {
+    display: block;
+    margin: clamp(14px, 3.73vw, 20px) 0 0;
+    text-align: center;
+    font-family: var(--jgs-font-noto-serif);
+    font-weight: 500;
+    font-size: clamp(18px, 4.8vw, 22px);
+    line-height: 1.65;
+    letter-spacing: 0.06em;
+    color: #103455;
+  }
+
+  .jgs-recruitment-page #recruitment-ideal .jgs-recruitment-ideal__figure {
+    display: none;
+  }
+
+  .jgs-recruitment-page #recruitment-ideal .jgs-recruitment-ideal__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(12px, 3.2vw, 18px);
+    margin-top: clamp(20px, 5.33vw, 28px);
+  }
+
+  .jgs-recruitment-page #recruitment-ideal .jgs-recruitment-ideal__grid-item {
+    margin: 0;
+    line-height: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-ideal .jgs-recruitment-ideal__grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .jgs-recruitment-page #recruitment-ideal .jgs-recruitment-ideal__closing {
+    display: none;
+  }
+
+  /* よくある質問 — パネル枠なし */
+  .jgs-recruitment-page #recruitment-faq.jgs-recruitment-jobs-panel,
+  .jgs-recruitment-page #recruitment-faq.jgs-recruitment-faq {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-company-message-card__body {
+    margin-top: clamp(12px, 3.2vw, 18px);
+    padding-top: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__list {
+    padding-top: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__item {
+    overflow: visible;
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__item + .jgs-recruitment-faq__item {
+    margin-top: clamp(14px, 3.73vw, 18px);
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__q {
+    overflow: visible;
+    grid-template-columns: clamp(52px, 13.87vw, 64px) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(6px, 1.6vw, 10px);
+    min-height: clamp(60px, 16vw, 72px);
+    padding: clamp(10px, 2.67vw, 14px) clamp(10px, 2.67vw, 14px) clamp(6px, 1.6vw, 8px);
+    padding-left: clamp(6px, 1.6vw, 10px);
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__q-media {
+    width: clamp(50px, 13.33vw, 60px);
+    margin-top: calc(-1 * clamp(10px, 2.67vw, 14px));
+    align-self: end;
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__q-main {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: clamp(8px, 2.13vw, 10px);
+    padding-left: 0;
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__q-badge {
+    min-width: clamp(38px, 10.13vw, 46px);
+    min-height: clamp(38px, 10.13vw, 46px);
+    font-size: var(--jgs-font-size-small);
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__q-text {
+    flex: 1 1 auto;
+    font-size: var(--jgs-font-size-body);
+    line-height: 1.55;
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__a {
+    position: relative;
+    display: block;
+    overflow: visible;
+    min-height: clamp(72px, 19.2vw, 88px);
+    padding: clamp(12px, 3.2vw, 16px) clamp(10px, 2.67vw, 14px) clamp(12px, 3.2vw, 16px);
+    padding-right: clamp(68px, 18.13vw, 82px);
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__a-text {
+    width: 100%;
+    font-size: var(--jgs-font-size-small);
+    line-height: 1.9;
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__a-media {
+    position: absolute;
+    right: clamp(2px, 0.53vw, 6px);
+    bottom: 0;
+    width: clamp(64px, 17.07vw, 78px);
+    max-width: none;
+    justify-self: auto;
+    align-self: auto;
+  }
+
+  .jgs-recruitment-page #recruitment-faq .jgs-recruitment-faq__a-media img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 応募方法・選考フロー（縦タイムライン） */
+.jgs-recruitment-flow__steps {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  --jgs-recruitment-flow-marker-size: 70px;
+  --jgs-recruitment-flow-step-gap: clamp(22px, 3vw, 32px);
+}
+
+.jgs-recruitment-flow__step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--jgs-recruitment-flow-marker-size) / 2);
+  left: clamp(35px, 4.2vw, 42px);
+  width: 1px;
+  height: calc(100% + var(--jgs-recruitment-flow-step-gap));
+  background-color: #EAE1D1;
+  z-index: 0;
+}
+
+.jgs-recruitment-flow__step {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: clamp(72px, 8.5vw, 88px) minmax(0, 1fr);
+  gap: clamp(18px, 2.4vw, 28px);
+  align-items: start;
+}
+
+.jgs-recruitment-flow__step + .jgs-recruitment-flow__step {
+  margin-top: var(--jgs-recruitment-flow-step-gap);
+}
+
+.jgs-recruitment-flow__marker {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin-inline: auto;
+  border-radius: 50%;
+  background: #EAE1D1;
+}
+
+.jgs-recruitment-flow__marker-label {
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-small);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: rgb(16 52 85 / 0.65);
+}
+
+.jgs-recruitment-flow__marker-num {
+  margin-top: 2px;
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-heading-title);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: #103455;
+}
+
+.jgs-recruitment-flow__body {
+  min-width: 0;
+  padding-top: clamp(4px, 0.6vw, 8px);
+}
+
+.jgs-recruitment-flow__step-title {
+  margin: 0;
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-heading-title);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+
+.jgs-recruitment-flow__text {
+  margin: clamp(10px, 1.2vw, 14px) 0 0;
+  font-size: var(--jgs-font-size-body);
+  line-height: 2;
+  color: #2f3034;
+}
+
+/* 求める人物像 */
+.jgs-recruitment-ideal__lead {
+  margin: 0 auto;
+  text-align: center;
+  font-size: var(--jgs-font-size-body);
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2f3034;
+}
+
+.jgs-recruitment-ideal__lead-br-sp {
+  display: none;
+}
+
+.jgs-recruitment-ideal__subtitle {
+  display: none;
+}
+
+.jgs-recruitment-ideal__grid {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jgs-recruitment-ideal__figure {
+  margin: clamp(22px, 3vw, 36px) auto 0;
+  max-width: min(100%, 720px);
+  line-height: 0;
+}
+
+.jgs-recruitment-ideal__diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.jgs-recruitment-ideal__closing {
+  margin-top: clamp(22px, 3vw, 36px);
+  text-align: center;
+}
+
+.jgs-recruitment-ideal__closing p {
+  margin: 0;
+  font-size: var(--jgs-font-size-body);
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgb(47 48 52 / 0.72);
+}
+
+.jgs-recruitment-ideal__closing p + p {
+  margin-top: 0.75em;
+}
+
+/* よくある質問 */
+.jgs-recruitment-faq.jgs-company-message-card {
+  background-color: rgb(255 248 250 / 0.96);
+  border-color: rgb(16 52 85 / 0.28);
+}
+
+.jgs-recruitment-faq__eyebrow {
+  color: rgb(90 130 168 / 0.88);
+}
+
+.jgs-recruitment-faq .jgs-company-message-card__body {
+  margin-top: clamp(20px, 2.5vw, 28px);
+}
+
+.jgs-recruitment-faq__title {
+  font-family: var(--jgs-font-noto-serif);
+  font-weight: 500;
+  font-size: var(--jgs-font-size-heading-title);
+  letter-spacing: 0.06em;
+}
+
+.jgs-recruitment-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: clamp(10px, 1.8vw, 20px);
+}
+
+.jgs-recruitment-faq__item + .jgs-recruitment-faq__item {
+  margin-top: clamp(20px, 2.6vw, 30px);
+}
+
+.jgs-recruitment-faq__q {
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(70px, 8vw, 92px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(10px, 1.4vw, 16px);
+  min-height: clamp(72px, 9vw, 92px);
+  padding: 0 clamp(14px, 2vw, 24px) 0 clamp(12px, 2vw, 20px);
+  padding-left: clamp(12px, 2vw, 20px);
+  background: #C5AC7A;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.jgs-recruitment-faq__q-media {
+  position: relative;
+  z-index: 1;
+  align-self: end;
+  margin-top: calc(-1 * clamp(16px, 2.8vw, 28px));
+  width: clamp(64px, 7.2vw, 87px);
+  justify-self: start;
+}
+
+.jgs-recruitment-faq__q-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.jgs-recruitment-faq__q-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(10px, 1.4vw, 14px);
+  min-width: 0;
+  padding-left: clamp(4px, 0.8vw, 10px);
+}
+
+.jgs-recruitment-faq__q-badge {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: clamp(48px, 5vw, 56px);
+  min-height: clamp(48px, 5vw, 56px);
+  padding: 0 8px;
+  border-radius: 50%;
+  background: #fff;
+  font-family: var(--jgs-font-inter);
+  font-size: var(--jgs-font-size-button);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #C5AC7A;
+}
+
+.jgs-recruitment-faq__q-text {
+  margin: 0;
+  flex: 1 1 12rem;
+  min-width: 0;
+  font-family: var(--jgs-font-inter);
+  font-weight: 400;
+  font-size: var(--jgs-font-size-heading-title);
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+  color: #103455;
+}
+
+.jgs-recruitment-faq__a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(96px, 12vw, 140px);
+  gap: clamp(14px, 2vw, 22px);
+  align-items: center;
+  padding: 0 clamp(14px, 2vw, 24px) 0 clamp(24px, 4vw, 48px);
+  background: #fff;
+  border: 1px solid #000;
+}
+
+.jgs-recruitment-faq__a-text {
+  margin: 0;
+  font-size: var(--jgs-font-size-body);
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #000;
+}
+
+.jgs-recruitment-faq__a-media {
+  justify-self: end;
+  align-self: end;
+  width: 100%;
+  max-width: clamp(96px, 12vw, 133px);
+}
+
+.jgs-recruitment-faq__a-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 選考フロー：STEP 1 から順番にフェードイン */
+.jgs-company-anim-ready .is-inview .jgs-recruitment-flow__step.jgs-company-anim-item {
+  animation: jgs-company-fade-up 1.1s cubic-bezier(0.22, 1, 0.36, 1) calc(0.18s + var(--jgs-company-anim-index, 0) * 0.22s) forwards;
+}
+
+/* 求める人物像：図解を下からフェードイン */
+.jgs-company-anim-ready .is-inview .jgs-recruitment-ideal__figure.jgs-company-anim-item {
+  animation: jgs-company-fade-up 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.12s forwards;
+}
+
+/* よくある質問：Q&A を順番にフェードイン */
+.jgs-company-anim-ready .is-inview .jgs-recruitment-faq__item.jgs-company-anim-item {
+  animation: jgs-company-fade-up 1.1s cubic-bezier(0.22, 1, 0.36, 1) calc(0.18s + var(--jgs-company-anim-index, 0) * 0.22s) forwards;
+}
+
+/* 募集要項カード：下から順番にフェードイン */
+.jgs-company-anim-ready .is-inview #recruitment-job-description .jgs-top-recruit-jobs__item.jgs-company-anim-item {
+  animation: jgs-company-fade-up 1.1s cubic-bezier(0.22, 1, 0.36, 1) calc(0.18s + var(--jgs-company-anim-index, 0) * 0.22s) forwards;
+}
+
+/* SP（ベースの PC 指定より後に置く） */
+@media (max-width: 768px) {
+  .jgs-recruitment-ideal__lead-br-sp {
+    display: block;
+  }
+}

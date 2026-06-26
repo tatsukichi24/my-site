@@ -1,0 +1,17 @@
+/* スマホ時、フッター到達中は採用追従CTAを隠す */
+
+@media (max-width: 768px) {
+  .jgs-recruit-top__fv-actions {
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .jgs-recruit-top__fv-actions.is-footer-visible {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    pointer-events: none;
+  }
+}
