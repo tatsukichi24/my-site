@@ -1532,7 +1532,7 @@
 
   .jgs-childcare-strength__text {
     margin-top: clamp(14px, 3.73vw, 18px);
-    font-size: var(--jgs-font-size-small);
+    font-size: clamp(14px, 3.8vw, 16px);
     line-height: 1.95;
     letter-spacing: 0.04em;
     color: #2f3034;
@@ -1877,7 +1877,7 @@
   .jgs-childcare-person__qtext,
   .jgs-childcare-person__atext {
     line-height: 1.85;
-    font-size: var(--jgs-font-size-small);
+    font-size: clamp(14px, 3.8vw, 16px);
   }
 
   .jgs-childcare-person__subimage {

@@ -630,7 +630,7 @@
     grid-row: 1;
     margin: 0;
     align-self: center;
-    font-size: clamp(14px, 3vw, 22px);
+    font-size: clamp(16px, 4.2vw, 22px);
     line-height: 1.35;
   }
 
@@ -638,7 +638,7 @@
     grid-column: 1 / -1;
     grid-row: 2;
     margin: 0;
-    font-size: clamp(12px, 2.5vw, 20px);
+    font-size: clamp(14px, 3.8vw, 20px);
     line-height: 1.75;
     text-align: left;
   }
@@ -973,6 +973,14 @@
 
   .jgs-service-reform-voice-card__meta div:first-child dt {
     font-size: clamp(13px, 3.5vw, 15px);
+  }
+
+  .jgs-service-reform-voice-card__title {
+    font-size: clamp(16px, 4.2vw, 20px);
+  }
+
+  .jgs-service-reform-voice-card__desc {
+    font-size: clamp(14px, 3.8vw, 16px);
   }
 }
 

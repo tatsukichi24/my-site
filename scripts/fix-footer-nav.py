@@ -31,6 +31,7 @@ STORE_LINKS = [
     "ゆめタウン黒瀬店",
     "イオン三原店",
     "アクト神辺店",
+    "フジグラン尾道店",
 ]
 
 
@@ -269,7 +270,7 @@ def fix_file(html_path: Path) -> bool:
     text = text.replace("</motion>", "</div>").replace("<motion ", "<div ")
 
     if text != original:
-        html_path.write_text(text, encoding="utf-8", newline="\n")
+        html_path.write_text(text, encoding="utf-8")
         return True
     return False
 

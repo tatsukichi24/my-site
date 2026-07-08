@@ -254,7 +254,11 @@
 
 @media (max-width: 768px) {
   .jgs-service-watch-repair-card__title {
-    font-size: clamp(14px, 3.2vw, 22px);
+    font-size: clamp(16px, 4.2vw, 22px);
+  }
+
+  .jgs-service-watch-repair-card__note {
+    font-size: clamp(14px, 3.8vw, 16px);
   }
 }
 
@@ -470,7 +474,7 @@
   .jgs-service-watch-repair-price__table th,
   .jgs-service-watch-repair-price__table td {
     padding: clamp(10px, 2.8vw, 13px) clamp(8px, 2.2vw, 11px);
-    font-size: clamp(0.6875rem, 2.85vw, 0.8125rem);
+    font-size: clamp(13px, 3.5vw, 15px);
     line-height: 1.45;
     border-color: #bfbfbf;
     vertical-align: middle;
@@ -486,7 +490,7 @@
 
   .jgs-service-watch-repair-price__table td {
     width: 66%;
-    font-size: clamp(0.625rem, 2.5vw, 0.75rem);
+    font-size: clamp(12px, 3.2vw, 14px);
     font-weight: 400;
     color: #111;
   }
@@ -752,7 +756,7 @@
     grid-row: 1;
     margin: 0;
     align-self: center;
-    font-size: clamp(14px, 3vw, 22px);
+    font-size: clamp(16px, 4.2vw, 22px);
     line-height: 1.35;
   }
 
@@ -760,7 +764,7 @@
     grid-column: 1 / -1;
     grid-row: 2;
     margin: 0;
-    font-size: clamp(12px, 2.5vw, 20px);
+    font-size: clamp(14px, 3.8vw, 20px);
     line-height: 1.75;
     text-align: left;
   }
@@ -939,9 +943,17 @@
     text-align: left;
   }
 
+  .jgs-service-watch-repair-voice-card__badge {
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+
   .jgs-service-watch-repair-voice-card__title {
     margin-top: clamp(8px, 2vw, 12px);
-    font-size: var(--jgs-font-size-body);
+    font-size: clamp(16px, 4.2vw, 20px);
+  }
+
+  .jgs-service-watch-repair-voice-card__desc {
+    font-size: clamp(14px, 3.8vw, 16px);
   }
 
   .jgs-service-watch-repair-voice-card__meta {
@@ -960,7 +972,7 @@
   .jgs-service-watch-repair-voice-card__meta dt,
   .jgs-service-watch-repair-voice-card__meta dd {
     padding: clamp(5px, 1.4vw, 7px) clamp(5px, 1.4vw, 8px);
-    font-size: clamp(10px, 2.2vw, 12px);
+    font-size: clamp(12px, 3.2vw, 14px);
     display: flex;
     align-items: center;
     white-space: nowrap;

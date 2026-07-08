@@ -261,5 +261,6 @@
 
   .jgs-recruit__desc {
     padding: 0;
+    font-size: clamp(14px, 3.8vw, 16px);
   }
 }

@@ -407,9 +407,11 @@
 
   .jgs-shop-card__address {
     margin-top: 24px;
+    font-size: clamp(14px, 3.8vw, 16px);
   }
 
   .jgs-shop-card__meta {
     margin-block: 24px;
+    font-size: clamp(14px, 3.8vw, 16px);
   }
 }
