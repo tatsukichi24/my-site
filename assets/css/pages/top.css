@@ -1874,6 +1874,20 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1000px) {
+  .jgs-top-service__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .jgs-top-service__rail {
+    display: none;
+  }
+
+  .jgs-top-service__body {
+    grid-column: 1;
+  }
+}
+
 /* 取扱商品：タブレットは PC レイアウト（6列グリッド＋右レール）を縮小 */
 @media (min-width: 769px) and (max-width: 1040px) {
   .jgs-top-products__surface {
@@ -1959,6 +1973,20 @@
   .jgs-top-products__more {
     font-size: clamp(10px, 1vw, 12px);
     white-space: nowrap;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  .jgs-top-products__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .jgs-top-products__body {
+    grid-column: 1;
+  }
+
+  .jgs-top-products__rail {
+    display: none;
   }
 }
 
@@ -2491,6 +2519,12 @@
   #recruit-top-job-description .jgs-top-recruit-jobs__name {
     font-size: clamp(16px, 2.3vw, 20px);
     white-space: nowrap;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  .jgs-top-recruit__label-img {
+    display: none;
   }
 }
 
@@ -3110,6 +3144,20 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1000px) {
+  .jgs-top-shops__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .jgs-top-shops__rail {
+    display: none;
+  }
+
+  .jgs-top-shops__body {
+    grid-column: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .jgs-top-shops {
     --jgs-top-shops-meta-min-h: clamp(76px, 20vw, 92px);
@@ -3708,6 +3756,20 @@
 
   .jgs-top-news__excerpt {
     font-size: clamp(11px, 1.1vw, 14px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  .jgs-top-news__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .jgs-top-news__rail {
+    display: none;
+  }
+
+  .jgs-top-news__body {
+    padding-right: 0;
   }
 }
 

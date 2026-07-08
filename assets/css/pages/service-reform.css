@@ -820,6 +820,33 @@
   }
 }
 
+@media (max-width: 1400px) and (min-width: 1201px) {
+  .jgs-service-reform-voice-card {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: clamp(56px, 5vw, 72px);
+  }
+
+  .jgs-service-reform-voice-card__summary {
+    grid-template-columns: clamp(120px, 12vw, 160px) minmax(0, 1fr);
+  }
+
+  .jgs-service-reform-voice-card__bf {
+    justify-self: end;
+    width: min(100%, 330px);
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 681px) {
+  .jgs-service-reform-voice-card {
+    grid-template-columns: 1fr;
+  }
+
+  .jgs-service-reform-voice-card__bf {
+    justify-self: center;
+    width: min(100%, 520px);
+  }
+}
+
 .jgs-service-reform-voice-card__profile,
 .jgs-service-reform-voice-card__bf {
   margin: 0;

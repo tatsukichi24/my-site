@@ -69,7 +69,7 @@
 
 .jgs-childcare-kv {
   position: relative;
-  min-height: clamp(460px, 45vw, 620px);
+  min-height: clamp(640px, 48vw, 800px);
   margin-top: -200px;
 }
 
@@ -93,7 +93,7 @@
 
 .jgs-childcare-kv__catch {
   position: absolute;
-  top: 20%;
+  top: clamp(120px, 8.5vw, 140px);
   right: 40px;
   margin: 0;
   font-family: var(--jgs-font-noto-serif);
@@ -109,7 +109,7 @@
 
 .jgs-childcare-kv__visual {
   position: relative;
-  margin: clamp(18px, 3vw, 36px) 0 0;
+  margin: clamp(185px, 13.5vw, 215px) 0 0;
   max-width: min(100%, 1016px);
 }
 
@@ -1014,15 +1014,6 @@
 }
 
 @media (max-width: 1400px) and (min-width: 1201px) {
-  .jgs-childcare-kv__visual {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .jgs-childcare-kv__catch {
-    right: clamp(12px, 2vw, 28px);
-  }
-
   .jgs-childcare-strength__content {
     margin-left: min(44%, 420px);
     padding-right: 0;
@@ -1080,9 +1071,10 @@
   }
 
   .jgs-childcare-kv__visual {
+    margin: 0 auto;
     margin-inline: auto;
-    width: 100%;
-    max-width: min(100%, 520px);
+    width: 80vw;
+    max-width: min(80vw, 760px);
   }
 
   .jgs-childcare-kv__catch {
@@ -1255,8 +1247,8 @@
   .jgs-childcare-kv__visual {
     order: 1;
     margin: 0 auto;
-    max-width: min(100%, 420px);
-    width: 100%;
+    max-width: 80vw;
+    width: 80vw;
   }
 
   .jgs-childcare-kv__main {
