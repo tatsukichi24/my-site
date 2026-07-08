@@ -336,6 +336,7 @@
   margin: 0;
   font-family: "Inter", sans-serif;
   font-size: var(--jgs-font-size-body);
+  font-weight: 700;
   letter-spacing: 0.1em;
   color: rgb(16 52 85 / 0.6);
 }

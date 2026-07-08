@@ -2208,7 +2208,7 @@
 .jgs-top-recruit__headline {
   margin: 0 0 clamp(20px, 2.5vw, 32px);
   font-family: var(--jgs-font-zen-old-mincho);
-  font-weight: 500;
+  font-weight: 700;
   font-size: clamp(30px, 2.3959vw, 46px);
   line-height: 1.45;
   letter-spacing: 0.06em;
