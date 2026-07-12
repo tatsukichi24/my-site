@@ -232,6 +232,10 @@
     margin: 10px auto;
   }
 
+  .jgs-recruit__lead {
+    font-size: clamp(14px, 0.8334vw, 18px);
+  }
+
   .jgs-recruit__term {
     padding: 3px 28px;
     width: fit-content;

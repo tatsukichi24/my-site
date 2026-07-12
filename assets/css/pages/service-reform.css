@@ -352,7 +352,7 @@
   margin: 0;
   text-align: center;
   font-family: var(--jgs-font-noto-serif);
-  font-size: clamp(20px, 1.35vw, 28px);
+  font-size: clamp(22px, 1.35vw, 30px);
   font-weight: 500;
   line-height: 1.4;
   color: #231815;
@@ -361,7 +361,7 @@
 .jgs-service-reform-repaired__item-text {
   margin: 8px 0 0;
   font-family: var(--jgs-font-sans);
-  font-size: var(--jgs-font-size-small);
+  font-size: clamp(14px, 0.8334vw, 18px);
   line-height: 1.75;
   color: rgb(35 24 21 / 0.9);
 }

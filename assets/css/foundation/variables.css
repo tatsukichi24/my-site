@@ -79,8 +79,8 @@
   --jgs-font-size-x-small: clamp(8px, 0.625vw, 12px);
 
   /* リフォーム「リペア可能なもの」カード（〜768px） */
-  --jgs-font-size-repaired-item-title-sp: clamp(12px, 2.5vw, 20px);
-  --jgs-font-size-repaired-item-text-sp: clamp(10px, 2.08vw, 18px);
+  --jgs-font-size-repaired-item-title-sp: clamp(14px, 2.5vw, 22px);
+  --jgs-font-size-repaired-item-text-sp: clamp(12px, 2.08vw, 20px);
 
   /* 既存互換エイリアス */
   --jgs-header-nav-size: var(--jgs-font-size-header-nav);
