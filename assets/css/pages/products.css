@@ -848,6 +848,10 @@
   color: #231815;
 }
 
+.jgs-products-accessory-row__text + .jgs-products-accessory-row__text {
+  margin-top: 10px;
+}
+
 .jgs-products-accessory-row__media {
   margin: 0;
   min-width: 0;

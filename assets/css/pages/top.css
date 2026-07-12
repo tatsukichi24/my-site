@@ -2125,7 +2125,7 @@
   }
 
   .jgs-top-products__name {
-    font-size: clamp(10px, 2.67vw, 14px);
+    font-size: clamp(9px, 2.67vw, 13px);
     font-weight: 900;
   }
 }
