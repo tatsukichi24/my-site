@@ -282,7 +282,7 @@
 
 .jgs-company-message-card__sign-logo {
   display: block;
-  width: 200px;
+  width: 400px;
   height: auto;
 }
 
@@ -816,8 +816,8 @@
 
   .jgs-company-message-card__sign-logo {
     width: auto;
-    height: clamp(26px, 7.5vw, 42px);
-    max-width: min(100%, 165px);
+    height: clamp(52px, 15vw, 84px);
+    max-width: min(100%, 330px);
   }
 
   .jgs-company-history-card__timeline {

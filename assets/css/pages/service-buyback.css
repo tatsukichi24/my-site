@@ -125,7 +125,7 @@
   display: grid;
   grid-auto-rows: 1fr;
   gap: 14px;
-  width: 320px;
+  width: 380px;
   max-width: calc(
     100vw - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px) - 16px
   );

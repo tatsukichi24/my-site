@@ -9,7 +9,6 @@
 .jgs-top-fv__image-wrap {
   position: absolute;
   inset: 0;
-  left: 35%;
   overflow: hidden;
   border-radius: 0 0 0 300px;
   isolation: isolate;
@@ -287,12 +286,8 @@
   }
 }
 
-/* タブレット・ノートPC: 画像の女性が右に寄るよう調整 + テキスト改行 */
+/* タブレット・ノートPC: テキスト改行 */
 @media (max-width: 1200px) {
-  .jgs-top-fv__image {
-    object-position: 80% center;
-  }
-
   .jgs-top-fv__line--wrap {
     flex-wrap: wrap;
   }
@@ -305,10 +300,6 @@
 @media (max-width: 1024px) {
   .jgs-top-fv {
     height: clamp(480px, 68vw, 700px);
-  }
-
-  .jgs-top-fv__image {
-    object-position: 85% center;
   }
 
   .jgs-top-fv__content {
@@ -428,13 +419,13 @@
 
   .jgs-top-fv__badge {
     padding: 0.1em 0.32em 0.18em;
-    font-size: var(--jgs-top-fv-sp-lead);
+    font-size: var(--jgs-top-fv-sp-brand);
     line-height: 1.1;
   }
 
   .jgs-top-fv__text,
   .jgs-top-fv__text-number {
-    font-size: var(--jgs-top-fv-sp-lead);
+    font-size: var(--jgs-top-fv-sp-brand);
     letter-spacing: -0.04em;
   }
 
