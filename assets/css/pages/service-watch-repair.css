@@ -914,6 +914,12 @@
   font-size: 0.8em;
 }
 
+.jgs-service-watch-repair-voice-card__note {
+  margin: 10px 0 0;
+  font-size: var(--jgs-font-size-small);
+  color: #231815;
+}
+
 @media (max-width: 768px) {
   .jgs-service-watch-repair-voice-card {
     grid-template-columns: 1fr;

@@ -35,7 +35,7 @@
 
 .jgs-top-fv__title {
   margin: 0;
-  color: #162c53;
+  color: #1D2088;
   font-family: var(--jgs-font-zen-old-mincho);
   font-weight: 500;
   line-height: 1.2;
@@ -54,7 +54,7 @@
 .jgs-top-fv__badge {
   display: inline-block;
   padding: 0.12em 0.34em 0.22em;
-  background-color: #162c53;
+  background-color: #1D2088;
   color: #fff;
   font-size: var(--jgs-font-size-lead-title);
   letter-spacing: 0.01em;
@@ -287,9 +287,28 @@
   }
 }
 
+/* タブレット・ノートPC: 画像の女性が右に寄るよう調整 + テキスト改行 */
+@media (max-width: 1200px) {
+  .jgs-top-fv__image {
+    object-position: 80% center;
+  }
+
+  .jgs-top-fv__line--wrap {
+    flex-wrap: wrap;
+  }
+
+  .jgs-top-fv__text--shop {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1024px) {
   .jgs-top-fv {
     height: clamp(480px, 68vw, 700px);
+  }
+
+  .jgs-top-fv__image {
+    object-position: 85% center;
   }
 
   .jgs-top-fv__content {

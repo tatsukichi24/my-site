@@ -1261,6 +1261,54 @@
     letter-spacing: 0.05em;
     color: #103455;
   }
+
+  /* 募集要項カード：SPで横長＋縦２列 */
+  .jgs-recruit-top__work-style-jobs .jgs-top-recruit-jobs__list {
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 4.27vw, 20px);
+  }
+
+  .jgs-recruit-top__work-style-jobs .jgs-top-recruit-jobs__stack-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: clamp(10px, 2.67vw, 14px);
+    align-items: center;
+    padding: clamp(6px, 1.6vw, 10px);
+  }
+
+  .jgs-recruit-top__work-style-jobs .jgs-top-recruit-jobs__media {
+    aspect-ratio: 4 / 3;
+    border-radius: clamp(4px, 1.07vw, 6px);
+  }
+
+  .jgs-recruit-top__work-style-jobs .jgs-top-recruit-jobs__img {
+    transform: scale(1.05);
+  }
+
+  .jgs-recruit-top__work-style-jobs .jgs-top-recruit-jobs__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(6px, 1.6vw, 10px);
+    margin-top: 0;
+  }
+
+  .jgs-recruit-top__work-style-jobs .jgs-top-recruit-jobs__en {
+    font-size: clamp(11px, 2.93vw, 13px);
+    letter-spacing: 0.1em;
+  }
+
+  .jgs-recruit-top__work-style-jobs .jgs-top-recruit-jobs__en::after {
+    margin-top: clamp(4px, 1.07vw, 6px);
+  }
+
+  .jgs-recruit-top__work-style-jobs .jgs-top-recruit-jobs__name {
+    margin-top: clamp(4px, 1.07vw, 6px);
+    font-size: clamp(16px, 4.27vw, 20px);
+  }
+
+  .jgs-recruit-top__work-style-jobs .jgs-top-recruit-jobs__more {
+    font-size: clamp(12px, 3.2vw, 14px);
+  }
 }
 
 /* ----- ABOUT US（2カラム・左テキストが右ビジュアルに重なる） ----- */
@@ -1990,7 +2038,7 @@
 .jgs-recruit-top__interview-bg {
   position: absolute;
   left: 53%;
-  top: 75%;
+  top: 85%;
   width: 95%;
   margin: 0;
   translate: -50% -50%;

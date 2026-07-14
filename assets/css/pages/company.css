@@ -261,10 +261,11 @@
 .jgs-company-message-card__sign {
   margin: 28px 0 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 18px;
   align-items: flex-end;
   color: #2f3034;
+  padding-right: calc(270px + clamp(22px, 2vw, 34px));
 }
 
 .jgs-company-message-card__sign-text {
@@ -298,15 +299,15 @@
   font-family: "Inter", sans-serif;
   font-size: var(--jgs-font-size-body);
   letter-spacing: 0.1em;
-  color: rgb(16 52 85 / 0.6);
+  color: #000000;
 }
 
 .jgs-company-philosophy-card__title {
-  font-family: var(--jgs-font-inter);
+  font-family: var(--jgs-font-sans);
   font-size: var(--jgs-font-size-heading-title);
   font-weight: 500;
   letter-spacing: 0.08em;
-  color: #103455;
+  color: #143154;
 }
 
 .jgs-company-philosophy-card__body {
@@ -314,6 +315,37 @@
   font-size: var(--jgs-font-size-body);
   line-height: 2;
   color: #2f3034;
+}
+
+.jgs-company-philosophy-card__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #231815;
+}
+
+.jgs-company-philosophy-card__list li {
+  position: relative;
+  padding-left: 1.2em;
+}
+
+.jgs-company-philosophy-card__list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
+
+.jgs-company-philosophy-card__list li + li {
+  margin-top: 0.8em;
+}
+
+.jgs-company-philosophy-card__text {
+  margin: 0;
+  color: #231815;
+}
+
+.jgs-company-section-head--mission {
+  margin-top: 60px;
 }
 
 .jgs-company-philosophy-card__body p {
@@ -775,6 +807,7 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 8px;
+    padding-right: 0;
   }
 
   .jgs-company-message-card__sign-text {

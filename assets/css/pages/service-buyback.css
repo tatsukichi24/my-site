@@ -123,8 +123,9 @@
   right: -10px;
   bottom: max(20px, 5vh, env(safe-area-inset-bottom, 0px));
   display: grid;
+  grid-auto-rows: 1fr;
   gap: 14px;
-  width: 293px;
+  width: 320px;
   max-width: calc(
     100vw - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px) - 16px
   );
@@ -136,6 +137,7 @@
 .jgs-service-buyback-hero__action {
   display: block;
   width: 100%;
+  height: 100%;
   pointer-events: auto;
 }
 
@@ -246,6 +248,8 @@
 .jgs-service-buyback-hero__action--site .jgs-service-buyback-hero__stack-top {
   background: linear-gradient(180deg, #fbfbfc 0%, #d4d4d6 100%);
   color: #1d2088;
+  min-height: 80px;
+  justify-content: center;
 }
 
 .jgs-service-buyback-hero__logo {
@@ -495,6 +499,13 @@
   font-weight: 500;
   letter-spacing: 0.06em;
   color: rgb(4 0 0 / 0.62);
+}
+
+.jgs-service-buyback-intro__logo {
+  display: block;
+  width: clamp(154px, 27.5vw, 308px);
+  height: auto;
+  margin-bottom: clamp(12px, 2vw, 20px);
 }
 
 .jgs-service-buyback-intro__brand {

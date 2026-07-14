@@ -1,16 +1,11 @@
 /* 採用情報（募集要項）ページ — 会社概要ページのレイアウトを流用し背景のみ差し替え */
 
 .jgs-recruitment-page.jgs-company {
-  background-image: url("../../recruit-image/recruit-recruitment_bg.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center var(--jgs-header-offset);
-  background-attachment: fixed;
   background-color: #ebe6e8;
 }
 
 #main.jgs-recruitment-page.jgs-company {
-  background-color: #ebe6e8;
+  background-color: #ffffff;
   overflow-x: clip;
 }
 
@@ -178,12 +173,7 @@
   }
 
   #main.jgs-recruitment-page.jgs-company {
-    background-color: #ebe6e8;
-    background-image: url("../../recruit-image/sp-recruit-recruitment_bg.png");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 100% auto;
-    background-attachment: scroll;
+    background-color: #ffffff;
   }
 
   .jgs-recruitment-page .jgs-company-intro {
@@ -236,12 +226,29 @@
     --jgs-prod-card-r: clamp(8px, 2.13vw, 10px);
   }
 
+  /* 横長カードレイアウト（画像左・テキスト右） */
   .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__stack-top {
-    padding: clamp(5px, 1.33vw, 8px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: clamp(10px, 2.67vw, 14px);
+    align-items: center;
+    padding: clamp(6px, 1.6vw, 10px);
   }
 
   .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__media {
     aspect-ratio: 4 / 3;
+    border-radius: clamp(4px, 1.07vw, 6px);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__img {
+    transform: scale(1.05);
+  }
+
+  .jgs-recruitment-page #recruitment-job-description .jgs-top-recruit-jobs__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(6px, 1.6vw, 10px);
+    margin-top: 0;
   }
 
   /* カード内テキストのみSP向けにサイズ調整（フォント・太さはPCと同じ） */

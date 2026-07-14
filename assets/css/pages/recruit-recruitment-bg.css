@@ -1,4 +1,4 @@
-/* 採用情報ページの背景画像を2枚重ねにする */
+/* 採用情報ページの背景画像 */
 
 .jgs-recruitment-page .jgs-recruitment-inner {
   position: relative;
@@ -14,27 +14,31 @@
 .jgs-recruitment-page.jgs-company::before {
   content: "";
   position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
+  /* common.js が実測したヘッダー高。固定背景もヘッダー直下から開始する。 */
+  top: var(--jgs-recruit-mega-top, var(--jgs-header-offset));
+  right: 0;
+  bottom: 0;
+  left: 0;
   pointer-events: none;
   background-image: url("../../recruit-image/recruit-recruitment_pic-bg.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
+  background-size: 100% auto;
   z-index: 0;
 }
 
 .jgs-recruitment-page.jgs-company::after {
   content: "";
   position: absolute;
-  inset: 0;
-  top: -10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   pointer-events: none;
   background-image: url("../../recruit-image/recruit-recruitment_bg.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 100% 110%;
+  background-size: cover;
   z-index: 1;
 }
 
@@ -50,20 +54,14 @@
   z-index: 2;
 }
 
-@media (max-width: 768px) {
-  .jgs-recruitment-page.jgs-company {
-    background-image: none;
-  }
-
+@media (max-width: 1024px) {
   .jgs-recruitment-page.jgs-company::before {
-    background-image: url("../../recruit-image/recruit-recruitment_pic-bg.png");
+    background-image: url("../../recruit-image/sp-recruit-recruitment_bg.png");
     background-position: center top;
-    background-size: cover;
+    background-size: 100% auto;
   }
 
   .jgs-recruitment-page.jgs-company::after {
-    background-image: url("../../recruit-image/sp-recruit-recruitment_bg.png");
-    background-position: center top;
-    background-size: 100% 100%;
+    top: -3px;
   }
 }
