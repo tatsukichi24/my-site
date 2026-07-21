@@ -2138,6 +2138,15 @@
     font-size: clamp(9px, 2.67vw, 13px);
     font-weight: 900;
   }
+
+  .jgs-top-products__more {
+    font-size: 0;
+  }
+
+  .jgs-top-products__arrow {
+    font-size: 18px;
+    font-weight: 700;
+  }
 }
 
 /* ----- TOP: 採用情報（RECRUIT） ----- */
